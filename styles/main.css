@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 54px;
+    line-height: 99%;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+a {
+    font-size: 17px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.background {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.text {
+    z-index: 2;
+    position: relative;
+    transform: translate(0, 20vh);
+    text-align: center;
+}
+
+.image {
+    z-index: 2;
+    position: relative;
+    transform: translate(0, 10vh);
+    text-align: center;
+}
+.image img {
+    max-width: 90vw;
+}
+
+.socials {
+    z-index: 2;
+    position: absolute;
+    width: 60vw;
+    margin: 0 20vw;
+    transform: translate(0, 23vh);
+}
+.social-left {
+    border: 1px solid;
+    width: 28vw;
+    display: flex;
+    margin-bottom: 2.5vh;
+    background: rgba(0, 0, 0, 0.25);
+    margin-left: 1vw;
+}
+.social-right {
+    border: 1px solid;
+    width: 28vw;
+    display: flex;
+    margin-bottom: 2.5vh;
+    background: rgba(0, 0, 0, 0.25);
+    float:right;
+}
+
+.socials .img {
+    width: 50px;
+    height: 50px;
+    left: -1vw;
+    border: 1px solid;
+    position: relative;
+    margin: 7px auto auto;
+}
+.socials .website {
+    bottom: 50%;
+    position: absolute;
+    font-size: 15px;
+    color: rgb(192, 192, 192);
+    padding-left: 50px;
+}
+.socials .username {
+    top: 45%;
+    position: absolute;
+    font-size: 17px;
+    color: rgb(238, 238, 238);
+    padding-left: 50px;
+}
+
+.back {
+    z-index: 2;
+    position: absolute;
+    bottom: 5%;
+    width:100vw;
+    text-align: center;
+}
+
+.tooltip .tooltiptext {
+    color: #ffffff;
+    padding: 5px 10px 3px;
+    border-radius: 7px;
+    background: #000000;
+    box-shadow: 0 0 20px #ffffff;
+    position: absolute;
+    transform: translate(-50%, -9vh);
+    opacity: 0;
+    transition: opacity 0.75s;
+}
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #000000 transparent transparent;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+@media screen and (max-height: 500px) {
+    #copy {
+        font-size: 6vw !important;
+    }
+
+    .image img {
+        max-height: 35vh;
+    }
+
+    .tooltip .tooltiptext {
+        transform: translate(-50%, -20vh);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #copy {
+        font-size: 10vw;
+    }
+
+    .text {
+        transform: translate(0, 5vh);
+    }
+
+    .socials {
+        width: 90vw;
+        margin: 0 5vw;
+        transform: translate(0, 8vh);
+    }
+    .social-left {
+        width: 88vw;
+    }
+    .social-right {
+        width: 88vw;
+        float: none;
+        margin-left: 1vw;
+    }
+    .socials .img {
+        left: -3vw;
+    }
+    .socials .website {
+        padding-left: 15vw;
+    }
+    .socials .username {
+        padding-left: 15vw;
+    }
+}
